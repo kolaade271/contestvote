@@ -1,14 +1,12 @@
 import '../css/signup.css';
 import React, { useState, useEffect } from 'react';
-import { Category,Gettype,Submit,Confirm,Page} from '../../../voting/src/api/Auth';
+import { Category,Gettype,Submit,Confirm,Page} from '../api/Auth';
 import org from "../img/corporation.png";
 import message from "../img/message.png";
 import phone from "../img/phone.png";
-import bsug from "../img/bsug.jpeg";
-import bsh from "../img/bsh.png";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { GenAlert } from '../../../voting/src/alert/alert';
+import { GenAlert } from '../alert/alert';
 import { Bars } from  'react-loader-spinner'
 import Nav from './nav';
 import Countdown from 'react-countdown';
