@@ -292,11 +292,11 @@ function Contest() {
                                       aria-valuemax="100"
                                     >
                                     </div>
-                                    <div align="center">
+                                  </div>
+
+                                  <div align="center">
                                         {data.contestVolume >= 200 ? `VOTE ${data.contestVolume}` : ''}
                                       </div>
-
-                                  </div>
                                   <button
                                     className='btn btn-success submit'
                                     onClick={() => HandleProcess(data)}
