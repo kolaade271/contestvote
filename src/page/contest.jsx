@@ -291,7 +291,9 @@ Nominate and claim for your self or others who merits</div>
                           aria-valuenow={(data.contestVolume / contestDetails.data.threshold) * 100}
                           aria-valuemin="1"
                           aria-valuemax="100"
-                        ></div>
+                        >
+                          {data.contestVolume>="200"?"VOTE {data.contestVolume}":""}
+                        </div>
 
                       </div>
                       <button
