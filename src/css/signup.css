@@ -374,3 +374,6 @@ border-color: white;
   .progress{
     height: 5px;
   }
+  .warding{
+    color: red;
+  }
