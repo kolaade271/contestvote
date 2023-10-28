@@ -212,7 +212,7 @@ function Contest() {
                   <br />
                   <br />
                   <div className='orgname'>CountDown:</div>
-                  <div className='countdownn warding'><Countdown date={contestDetails.data.countDown} /></div>
+                  <div className='countdownn '><elem className={contestDetails.data.countDown <="Oct 25, 2023 11:00:00"?"warding":""}><Countdown date={contestDetails.data.countDown} /></elem></div>
                   <br />
 
 
