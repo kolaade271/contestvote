@@ -53,7 +53,7 @@ function Contest() {
   }, [id]);
 
   useEffect(() => {
-    Category().then(response => {
+    Category(id).then(response => {
       console.log(response.data)
       setCategory(response.data.data)
 

@@ -3,8 +3,8 @@ import axios from 'axios';
 
 
 
-export const Category = () => {
-  return (axios.post("https://app.paysnug.link/cont/category",
+export const Category = (id) => {
+  return (axios.post(`https://app.paysnug.link/cont/category?id=${id}`,
     {
     }, {
     headers: {
