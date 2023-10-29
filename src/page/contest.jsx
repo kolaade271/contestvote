@@ -279,8 +279,8 @@ function Contest() {
                                           : (data.contestVolume / contestDetails.data.threshold) * 100 >= 30
                                             ? 'bg-info'
                                             : (data.contestVolume / contestDetails.data.threshold) * 100 >= 20
-                                              ? 'bg-danger'
-                                              : "bg-warning"
+                                              ? 'bg-warning'
+                                              : "bg-danger"
 
                                         }`}
                                       role="progressbar"
