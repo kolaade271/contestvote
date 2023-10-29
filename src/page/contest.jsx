@@ -463,7 +463,7 @@ function Contest() {
 
                     </tbody>
                   </table>
-                  <p className='notex'>Each vote costs 50 naira and can be made in multiples of 50 naira. The system will tally the total based on these multiples. </p>
+                  <p className='notex'>Each vote costs {ttype.amount} naira and can be made in multiples of {ttype.amount} naira. The system will tally the total based on these multiples. </p>
                 </div>
 
 
