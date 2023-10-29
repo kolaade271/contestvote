@@ -276,7 +276,7 @@ function Contest() {
                                     <div
                                       className={`progress-bar progress-bar-striped ${(data.contestVolume / contestDetails.data.threshold) * 100 >= 99
                                           ? 'bg-success'
-                                          : (data.contestVolume / contestDetails.data.threshold) * 100 >= 30
+                                          : (data.contestVolume / contestDetails.data.threshold) * 100 >= 35
                                             ? 'bg-info'
                                             : (data.contestVolume / contestDetails.data.threshold) * 100 >= 20
                                               ? 'bg-warning'
@@ -425,8 +425,8 @@ function Contest() {
                       : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 30
                         ? 'bg-info'
                         : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 20
-                          ? 'bg-danger'
-                          : "bg-warning"
+                          ? 'bg-warning'
+                          : "bg-danger"
 
                     }`} role="progressbar" style={{
                       width: `${(ttype.contestVolume / contestDetails.data.threshold) * 100}%`, // Calculate percentage and set width
