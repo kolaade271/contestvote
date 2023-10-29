@@ -54,7 +54,6 @@ function Contest() {
 
   useEffect(() => {
     Category(id).then(response => {
-      console.log(response.data)
       setCategory(response.data.data)
 
     })
@@ -119,14 +118,12 @@ function Contest() {
     const dataId = process.target.getAttribute('dataId');
     const optionId = process.target.getAttribute('optionId');
     setLoading(true)
-    console.log(optionId)
     if (fullname != "") {
       if (phone) {
         if (dept != "") {
           Submit(fullname, phone, dept, dataId, optionId).then(response => {
             setLoading(false)
             const data = response.data.data;
-            console.log(response.data.data)
             setAcct(data)
             //setCategory(response.data.data)
             if (data.status == true) {
@@ -157,7 +154,6 @@ function Contest() {
     const option = event.target.value;
     Gettype(option).then(response => {
       const data = response.data.data;
-      console.log(response.data)
       getAlldata(data)
       setDataId(data ? data.categoryCode : false)
       getisType(true)
