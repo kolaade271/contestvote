@@ -153,7 +153,7 @@ function Contest() {
     setLoading(true)
     const option = event.target.value;
     Gettype(option).then(response => {
-      const data = response.data.data;
+      const data = response.data.data;s
       getAlldata(data)
       setDataId(data ? data.categoryCode : false)
       getisType(true)
@@ -418,7 +418,7 @@ function Contest() {
                 <div className="progress">
                   <div className={`progress-bar progress-bar-striped ${(ttype.contestVolume / contestDetails.data.threshold) * 100 >= 99
                       ? 'bg-success'
-                      : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 30
+                      : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 35
                         ? 'bg-info'
                         : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 20
                           ? 'bg-warning'
