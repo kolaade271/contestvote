@@ -291,7 +291,7 @@ function Contest() {
                                   </div>
 
                                   <div align="center">
-                                        {data.contestVolume >= data.threshold ? `VOTE ${data.contestVolume}` : ''}
+                                        {data.contestVolume >= data.threshold ? `VOTE  ${data.contestVolume}` : ''}
                                       </div>
                                   <button
                                     className='btn btn-success submit'
