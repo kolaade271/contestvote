@@ -422,7 +422,7 @@ function Contest() {
                         ? 'bg-info'
                         : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 20
                           ? 'bg-warning'
-                          : "bg-danger"
+                          : "bg-danger" 
 
                     }`} role="progressbar" style={{
                       width: `${(ttype.contestVolume / contestDetails.data.threshold) * 100}%`, // Calculate percentage and set width
