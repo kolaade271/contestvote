@@ -153,7 +153,7 @@ function Contest() {
     setLoading(true)
     const option = event.target.value;
     Gettype(option).then(response => {
-      const data = response.data.data;s
+      const data = response.data.data;
       getAlldata(data)
       setDataId(data ? data.categoryCode : false)
       getisType(true)
