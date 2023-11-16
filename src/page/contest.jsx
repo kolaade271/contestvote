@@ -208,7 +208,7 @@ function Contest() {
                   <br />
                   <br />
                   <div className='orgname'>CountDown:</div>
-                  <div className='countdownn '><elem className={contestDetails.data.countDown <="Oct 25, 2023 11:00:00"?"warding":""}><Countdown date={contestDetails.data.countDown} /></elem></div>
+                  <div className='countdownn '><elem className={contestDetails.data.countDown <= "Oct 25, 2023 11:00:00" ? "warding" : ""}><Countdown date={contestDetails.data.countDown} /></elem></div>
                   <br />
 
 
@@ -271,12 +271,12 @@ function Contest() {
                                   <div className="progress">
                                     <div
                                       className={`progress-bar progress-bar-striped ${(data.contestVolume / contestDetails.data.threshold) * 100 >= 99
-                                          ? 'bg-success'
-                                          : (data.contestVolume / contestDetails.data.threshold) * 100 >= 35
-                                            ? 'bg-info'
-                                            : (data.contestVolume / contestDetails.data.threshold) * 100 >= 20
-                                              ? 'bg-warning'
-                                              : "bg-danger"
+                                        ? 'bg-success'
+                                        : (data.contestVolume / contestDetails.data.threshold) * 100 >= 35
+                                          ? 'bg-info'
+                                          : (data.contestVolume / contestDetails.data.threshold) * 100 >= 20
+                                            ? 'bg-warning'
+                                            : "bg-danger"
 
                                         }`}
                                       role="progressbar"
@@ -291,8 +291,15 @@ function Contest() {
                                   </div>
 
                                   <div align="center">
-                                        {data.contestVolume >= contestDetails.data.threshold ? `VOTE  ${data.contestVolume}` : ''}
-                                      </div>
+                                    {
+                                      data.show_count === "1"
+                                        ? data.contestVolume >= contestDetails.data.threshold
+                                          ? `VOTE ${data.contestVolume}`
+                                          : ''
+                                        : ''
+                                    }
+
+                                  </div>
                                   <button
                                     className='btn btn-success submit'
                                     onClick={() => HandleProcess(data)}
@@ -417,12 +424,12 @@ function Contest() {
                 <div align="center">{ttype.name}</div>
                 <div className="progress">
                   <div className={`progress-bar progress-bar-striped ${(ttype.contestVolume / contestDetails.data.threshold) * 100 >= 99
-                      ? 'bg-success'
-                      : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 35
-                        ? 'bg-info'
-                        : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 20
-                          ? 'bg-warning'
-                          : "bg-danger" 
+                    ? 'bg-success'
+                    : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 35
+                      ? 'bg-info'
+                      : (ttype.contestVolume / contestDetails.data.threshold) * 100 >= 20
+                        ? 'bg-warning'
+                        : "bg-danger"
 
                     }`} role="progressbar" style={{
                       width: `${(ttype.contestVolume / contestDetails.data.threshold) * 100}%`, // Calculate percentage and set width
