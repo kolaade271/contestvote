@@ -292,7 +292,7 @@ function Contest() {
 
                                   <div align="center">
                                     {
-                                      data.show_count == "1"
+                                      contestDetails.data.show_count === "1"
                                         ? data.contestVolume >= contestDetails.data.threshold
                                           ? `VOTE ${data.contestVolume}`
                                           : ''
